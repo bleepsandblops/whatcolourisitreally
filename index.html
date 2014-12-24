@@ -69,9 +69,9 @@ function dotime(){
   if (mins < 10){mins = "0" + mins};
   if (secs < 10){secs = "0" + secs};
 
-  var hoursRed = Math.floor(hours / 24 * 255);
-  var minutesGreen = Math.floor(mins / 60 * 255);
-  var secondsBlue = Math.floor(secs / 60 * 255);
+  var hoursRed = Math.floor(hours / 23 * 255);
+  var minutesGreen = Math.floor(mins / 59 * 255);
+  var secondsBlue = Math.floor(secs / 59 * 255);
   
   
   hours.toString();
@@ -80,7 +80,7 @@ function dotime(){
   
   var hex = "#" + componentToHex(hoursRed) + componentToHex(minutesGreen) + componentToHex(secondsBlue);
   var rgb = "RGB: "+ hoursRed + ','+minutesGreen + ','+secondsBlue;
-  
+
   $("#t").html(hours +" : "+ mins +" : "+ secs);
   $("#rgb").html(rgb);
   $("#h").html(hex);
